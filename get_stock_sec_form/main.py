@@ -1,5 +1,3 @@
-import logging
-
 import requests
 from flask import Request, Response
 from requests.adapters import HTTPAdapter
@@ -29,7 +27,7 @@ def get_stock_sec_form(request: Request) -> Response:
     Returns the HTML of the requested form as the response.
     """
 
-    logging.info(f"Got request json: {request.json}")
+    print(f"Got request json: {request.json}")
     stock = request.json["stock"]
     form = request.json["form"]
 
@@ -43,10 +41,10 @@ def _get_stock_sec_form_html(stock: str, form: str) -> str:
     url_metadata = _get_filing_url(form.upper(), stock.upper())
     url = url_metadata.full_submission_url
 
-    logging.info(f"Fetching form from url '{url}'")
+    print(f"Fetching form from url '{url}'")
     content = requests.get(url, headers=HEADERS).text
 
-    logging.info(f"Got content ({len(content)} chars)")
+    print(f"Got content ({len(content)} chars)")
     return content
 
 
