@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "get_stock_sec_form"
+version = "0.1.0"
+description = ""
+authors = ["Tom Selfin <selfint@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+functions-framework = "^2.2.1"
+sec-edgar-downloader = "^4.2.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+isort = "^5.9.2"
+black = "^21.6b0"
+flake8-black = "^0.2.1"
+rope = "^0.19.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
