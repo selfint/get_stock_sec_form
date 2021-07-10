@@ -8,6 +8,8 @@ authors = ["Tom Selfin <selfint@gmail.com>"]
 python = "^3.9"
 functions-framework = "^2.2.1"
 sec-edgar-downloader = "^4.2.1"
+Flask = "^2.0.1"
+requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
